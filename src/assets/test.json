@@ -1,0 +1,16 @@
+{
+	"status": "UP",
+	"diskSpace" : {
+		"status": "UP",
+		"total": 1072327362
+	},
+	"mongo": {
+		"status": "UP",
+		"version": "3.6.1"
+	},
+	"db": {
+		"status": "DOWN",
+		"database": "Oracle",
+		"hello": "Hello"
+	}
+}

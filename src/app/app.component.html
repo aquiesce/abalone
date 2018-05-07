@@ -1,0 +1,62 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <h2>System Status</h2>
+  </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Status</div>
+          <div class="panel-body">
+            <h3>{{title}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Status</div>
+          <div class="panel-body">
+            <h3>{{title}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Status</div>
+          <div class="panel-body">
+            <h3>{{title}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Status</div>
+          <div class="panel-body">
+            <h3>{{title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <button (click)="showConfig()">Click Me</button>
+  <button (click)="clearData()">Clear</button>
+
+  <div *ngIf="haveData">
+
+    <div>CurrentConfig.status:{{ currentConfig.status }}</div>
+    <div>CurrentConfig.diskSpace.status:{{ currentConfig.diskSpace.status }}</div>
+    <div>CurrentConfig.diskSpace.total:{{ currentConfig.diskSpace.total }}</div>
+    <div>CurrentConfig.mongo.total:{{ currentConfig.mongo.status }}</div>
+    <div>CurrentConfig.mongo.version:{{ currentConfig.mongo.version }}</div>
+    <div>CurrentConfig.db.status:{{ currentConfig.db.status }}</div>
+    <div>CurrentConfig.db.database:{{ currentConfig.db.database }}</div>
+    <div>CurrentConfig.db.hello:{{ currentConfig.db.hello }}</div>
+
+  </div>
+
+</div>
+
+
