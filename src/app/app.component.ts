@@ -7,28 +7,39 @@ import { RootObject } from '../model/Actuator';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 'app';
 
   currentConfig: RootObject;
   haveData: Boolean = false;
 
-  constructor(private service: ActuatorService) {}
+  constructor(private service: ActuatorService) {
+
+    console.log('constructor');
+
+  }
+
+
+  ngOnInit(): void {
+    this.showConfig();
+  }
 
   showConfig() {
 
+    console.log('here');
+
     this.service.getData()
-    .subscribe(data => {
-        console.log(data);
-        console.log(data.status);
-        console.log(data.diskSpace.status);
-        console.log(data.mongo.version);
-        console.log(data.mongo.status);
-        console.log(data.db.status);
+    .subscribe(
+      data => {
         this.currentConfig = data;
         this.haveData = true;
-    });
-
+      },
+      error => console.log('Error: ' + error),
+      () => {
+        console.log('complete');
+      }
+    );
   }
 
   clearData() {

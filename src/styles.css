@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.status-ok .ui-panel-titlebar {
+  background: green;
+  color: red;
+  font-weight: bold;
+}
+
+.status-ok .ui-card-title {
+  background: green;
+  color: red;
+  font-weight: bold;
+}
+
+.status-problem .ui-tabview-selected {
+  background: blue;
+  color: red;
+  font-weight: bold;
+}
+
+.wibble .ui-tabview-panel {
+  color: red;
+  background: green;
+}
+
+.wibble {
+  color: red;
+  background: green;
+}
+
+.greenText a {
+  color: green;
+}
