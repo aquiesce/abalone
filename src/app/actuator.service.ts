@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/observable';
-import { RootObject } from '../model/Actuator';
+import { CodsHealth } from '../model/CodsHealth';
 
 @Injectable()
 export class ActuatorService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<RootObject> {
+  getCodsData(url: string): Observable<CodsHealth> {
 
-    return this.http.get<RootObject>('/assets/test.json');
+    return this.http.get<CodsHealth>(url);
 
   }
 }
