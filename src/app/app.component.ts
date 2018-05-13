@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
       () => { console.log('wibble'); }
     );
 
-    console.log('wwww: ' + returnedHealth.status)
+    console.log('wwww: ' + returnedHealth.status);
 
     return returnedHealth;
   }

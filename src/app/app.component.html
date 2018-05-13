@@ -10,14 +10,8 @@
       <p-tabView>
           <p-tabPanel header="Production" leftIcon="fa-calendar" headerStyleClass="ui-state-error">
               <div class="row">
-
                 <div class="col-md-3">
-                  <p-card title="CODS" subtitle="{{ this.devEnvironment.codsHealth.url }}" styleClass="ui-card-shadow"
-                    [ngClass]="(this.devEnvironment.codsHealth.status === 'UP') ? 'status-ok' : 'status-error'">
-                    <div>
-                        {{ this.devEnvironment.codsHealth.diskSpace.total }}
-                    </div>
-                  </p-card>
+                  <app-cods-card [codsHealth]='this.devEnvironment.codsHealth'></app-cods-card>
                 </div>
 
                 <div class="col-md-3">
@@ -28,24 +22,51 @@
                 </div>
 
                   <div class="col-md-3">
-                      <p-card title="Lorem ipsum" subtitle="Aston" styleClass="ui-card-shadow status-ok">
+                      <p-card title="Service 2" subtitle="Aston" styleClass="ui-card-shadow status-ok">
                           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
                           quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
                         </p-card>
                   </div>
 
                   <div class="col-md-3">
-                      <p-card title="Lorem ipsum" subtitle="Villa" styleClass="ui-card-shadow status-ok">
+                      <p-card title="Service 3" subtitle="Villa" styleClass="ui-card-shadow status-ok">
                           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
                           quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
                         </p-card>
                   </div>
                 </div>
+                <div class="small-bottom-margin"></div>
+                <div class="row">
+                  <div class="col-md-3">
+                      <app-cods-card [codsHealth]='this.devEnvironment.codsHealth'></app-cods-card>
+                  </div>
+
+                  <div class="col-md-3">
+                      <p-card title="Blackbeard" subtitle="{{ this.devEnvironment.codsHealth.url }}" styleClass="ui-card-shadow status-error">
+                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+                        </p-card>
+                  </div>
+
+                    <div class="col-md-3">
+                        <p-card title="Service 4" subtitle="Aston" styleClass="ui-card-shadow status-ok">
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+                          </p-card>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p-card title="Service 5" subtitle="Villa" styleClass="ui-card-shadow status-ok">
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+                          </p-card>
+                    </div>
+                  </div>
           </p-tabPanel>
           <p-tabPanel header="Pre-Prod" leftIcon="fa fa-cog fa-spin" headerStyleClass="ui-state-warning">
               Pre Prod will appear here....
           </p-tabPanel>
-          <p-tabPanel header="Development" leftIcon="fa fa-refresh fa-spin" rightIcon="fa-arrow-alt-circle-down" headerStyleClass="ui-state-default">
+          <p-tabPanel header="Development" leftIcon="fa fa-refresh fa-spin" rightIcon="fa-arrow-alt-circle-down" headerStyleClass="ui-state-error">
               Development will appear here....
           </p-tabPanel>
       </p-tabView>

@@ -23,16 +23,18 @@
   font-weight: bold;
 }
 
-.wibble .ui-tabview-panel {
-  color: red;
-  background: green;
+.small-bottom-margin {
+  margin-bottom: 10px;
 }
 
-.wibble {
-  color: red;
-  background: green;
+.small-top-margin {
+  margin-top: 10px;
 }
 
-.greenText a {
-  color: green;
+.small-left-margin {
+  margin-left: 10px;
+}
+
+.small-left-margin {
+  margin-right: 10px;
 }

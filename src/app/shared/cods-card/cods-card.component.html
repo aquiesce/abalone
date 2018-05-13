@@ -1,0 +1,23 @@
+<div>
+    <p-card title="CODS" subtitle="{{ this.codsHealth.url }}" styleClass="ui-card-shadow"
+    [ngClass]="( this.codsHealth.status === 'UP') ? 'status-ok' : 'status-error'">
+    <div>
+        <p>Diskspace</p>
+        <ul>
+          <li>Status: {{ this.codsHealth.diskSpace.status }}</li>
+          <li>Size: {{ this.codsHealth.diskSpace.total }}</li>
+        </ul>
+        <p>Mongo</p>
+        <ul>
+          <li>Status: {{ this.codsHealth.mongo.status }}</li>
+          <li>Version: {{ this.codsHealth.mongo.version }}</li>
+        </ul>
+        <p>Database</p>
+        <ul>
+          <li>Status: {{ this.codsHealth.db.status }}</li>
+          <li>Type: {{ this.codsHealth.db.database }}</li>
+          <li>Ping: {{ this.codsHealth.db.hello }}</li>
+        </ul>
+    </div>
+  </p-card>
+</div>
