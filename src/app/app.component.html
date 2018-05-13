@@ -1,88 +1,28 @@
 <div class="container">
 
   <div class="panel">
-    <h2>System Status</h2>
+    <h3>Abalone....</h3>
   </div>
 
   <div *ngIf='haveData'>
 
     <div>
       <p-tabView>
-          <p-tabPanel header="Production" leftIcon="fa-calendar" headerStyleClass="ui-state-error">
-              <div class="row">
-                <div class="col-md-3">
-                  <app-cods-card [codsHealth]='this.devEnvironment.codsHealth'></app-cods-card>
-                </div>
 
-                <div class="col-md-3">
-                    <p-card title="Blackbeard" subtitle="{{ this.devEnvironment.codsHealth.url }}" styleClass="ui-card-shadow status-error">
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                      </p-card>
-                </div>
-
-                  <div class="col-md-3">
-                      <p-card title="Service 2" subtitle="Aston" styleClass="ui-card-shadow status-ok">
-                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                        </p-card>
-                  </div>
-
-                  <div class="col-md-3">
-                      <p-card title="Service 3" subtitle="Villa" styleClass="ui-card-shadow status-ok">
-                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                        </p-card>
-                  </div>
-                </div>
-                <div class="small-bottom-margin"></div>
-                <div class="row">
-                  <div class="col-md-3">
-                      <app-cods-card [codsHealth]='this.devEnvironment.codsHealth'></app-cods-card>
-                  </div>
-
-                  <div class="col-md-3">
-                      <p-card title="Blackbeard" subtitle="{{ this.devEnvironment.codsHealth.url }}" styleClass="ui-card-shadow status-error">
-                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                        </p-card>
-                  </div>
-
-                    <div class="col-md-3">
-                        <p-card title="Service 4" subtitle="Aston" styleClass="ui-card-shadow status-ok">
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                          </p-card>
-                    </div>
-
-                    <div class="col-md-3">
-                        <p-card title="Service 5" subtitle="Villa" styleClass="ui-card-shadow status-ok">
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-                          </p-card>
-                    </div>
-                  </div>
+          <p-tabPanel header="Development" leftIcon="fa-calendar" headerStyleClass="ui-state-error">
+            <app-environment [environment]='this.devEnvironment' [environmentName]='"Development"'></app-environment>
           </p-tabPanel>
-          <p-tabPanel header="Pre-Prod" leftIcon="fa fa-cog fa-spin" headerStyleClass="ui-state-warning">
-              Pre Prod will appear here....
+
+          <p-tabPanel header="Pre-Production" leftIcon="fa-calendar" headerStyleClass="ui-state-ok">
+            Pre-Prod env will appear here...
           </p-tabPanel>
-          <p-tabPanel header="Development" leftIcon="fa fa-refresh fa-spin" rightIcon="fa-arrow-alt-circle-down" headerStyleClass="ui-state-error">
-              Development will appear here....
+
+          <p-tabPanel header="Production" leftIcon="fa-calendar" headerStyleClass="ui-state-ok">
+              Prod env will appear here...
           </p-tabPanel>
       </p-tabView>
+    </div>
   </div>
-
-    <!-- <i class="fa fa-medkit" style="font-size:20px;color:red"></i>
-    <i class="fa fa-cog fa-spin" style="font-size:16px;color:red"></i>
-    <i class="fa fa-refresh fa-spin" style="font-size:16px;color:green"></i>
-
-
-    <button (click)="showConfig()">Click Me</button>
-    <button (click)="clearData()">Clear</button>
- -->
-  </div>
-
-
 </div>
 
 

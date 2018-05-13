@@ -12,11 +12,7 @@ import { EnvironmentHealth } from '../model/EnvironmentHealth';
 })
 export class AppComponent implements OnInit {
 
-  devCodsHealth: CodsHealth;
   haveData: Boolean = false;
-
-  newCodsHealth: CodsHealth;
-
   devEnvironment: EnvironmentHealth;
   preProdEnvironment: EnvironmentHealth;
   prodEnvironment: EnvironmentHealth;
@@ -38,31 +34,18 @@ export class AppComponent implements OnInit {
     .subscribe( d => {
         this.devEnvironment.codsHealth = d;
         this.devEnvironment.codsHealth.url = environment.codsDevUrl;
-        console.log('log:' + this.devEnvironment.codsHealth.status);
         this.haveData = true;
       },
       e => console.log('Error: ' + e),
-      () => { console.log('complete'); });
+      () => { console.log('get cods data complete'); });
+
+      this.service.getBlackbeardData(environment.blackbeardDevUrl)
+      .subscribe( d => {
+          this.devEnvironment.blackbeardHealth = d;
+          this.devEnvironment.blackbeardHealth.url = environment.blackbeardDevUrl;
+          this.haveData = true;
+        },
+        e => console.log('Error: ' + e),
+        () => { console.log('get backbeard data complete'); });
   }
-
-  clearData() {
-    this.haveData = false;
-  }
-
-  getCodsHealth(url): CodsHealth {
-
-    let returnedHealth = new CodsHealth();
-
-    this.service.getCodsData(environment.codsDevUrl)
-    .subscribe(
-      data => { returnedHealth = data; },
-      error => console.log('Error: ' + error),
-      () => { console.log('wibble'); }
-    );
-
-    console.log('wwww: ' + returnedHealth.status);
-
-    return returnedHealth;
-  }
-
 }

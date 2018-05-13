@@ -12,11 +12,15 @@ import { TabViewModule } from 'primeng/components/tabview/tabview';
 import { ButtonModule } from 'primeng/components/button/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CodsCardComponent } from './shared/cods-card/cods-card.component';
+import { EnvironmentComponent } from './shared/environment/environment.component';
+import { BlackbeardCardComponent } from './shared/blackbeard-card/blackbeard-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CodsCardComponent
+    CodsCardComponent,
+    EnvironmentComponent,
+    BlackbeardCardComponent
   ],
   imports: [
     BrowserModule,

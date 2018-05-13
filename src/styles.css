@@ -1,8 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+.pageBackground {
+  background: whitesmoke;
+}
+
+.ui-tabview {
+  background-color: rgba(14, 2, 2, 0.041)!important;
+}
+
 .status-ok .ui-panel-titlebar {
-  background: green;
-  color: red;
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,255,0,1));
+  color: black;
   font-weight: bold;
+}
+
+.status-ok .ui-panel-footer {
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,255,0,1));
+  color: black;
+}
+
+.status-error .ui-panel-titlebar {
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  color: black;
+  font-weight: bold;
+}
+
+.status-error .ui-panel-footer {
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  color: black;
 }
 
 .status-error .ui-card-title {
@@ -12,6 +35,12 @@
 }
 
 .status-ok .ui-card-title {
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,255,0,1));
+  color: black;
+  font-weight: bold;
+}
+
+.ui-panel-titlebar {
   background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,255,0,1));
   color: black;
   font-weight: bold;

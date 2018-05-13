@@ -1,0 +1,25 @@
+<div>
+    <p-panel styleClass="ui-card-shadow"
+      [ngClass]="( this.blackbeardHealth.status === 'UP') ? 'status-ok' : 'status-error'">
+        <p-header>
+            <div>Blackbeard</div>
+        </p-header>
+        <div>
+            <p>Diskspace</p>
+            <ul>
+              <li>Status: {{ this.blackbeardHealth.diskSpace.status }}</li>
+              <li>Size: {{ this.blackbeardHealth.diskSpace.total }}</li>
+            </ul>
+            <p>Database</p>
+            <ul>
+              <li>Status: {{ this.blackbeardHealth.db.status }}</li>
+              <li>Type: {{ this.blackbeardHealth.db.database }}</li>
+              <li>Ping: {{ this.blackbeardHealth.db.hello }}</li>
+            </ul>
+        </div>
+        <p-footer>
+          {{ this.blackbeardHealth.url }}
+        </p-footer>
+
+    </p-panel>
+  </div>
